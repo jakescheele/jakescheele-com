@@ -89,6 +89,14 @@ const positions = [
       </>
     ),
   },
+  {
+    icon: <span style={{ fontSize: 24 }}>🕺</span>,
+    iconBg: "linear-gradient(135deg,#f97b4a,#f7a157)",
+    title: "Wobble & Wiggle",
+    company: null,
+    period: "Forever",
+    description: "I love being weird with my friends. Connecting with my inner child and freely expressing myself on the dance floor has always had a special place in my heart, and I love to share these experiences with my friends and the community I've grown to call family.",
+  },
 ];
 
 const css = `
