@@ -127,18 +127,19 @@ const css = `
 
   .header-row {
     display: flex; align-items: center; gap: 24px; margin-bottom: 20px;
+    flex-direction: column; text-align: center;
     opacity: 0; animation: riseIn 0.7s 0.05s ease forwards;
   }
 
   .photo {
-    width: 90px; height: 90px; border-radius: 50%; flex-shrink: 0;
+    width: 110px; height: 110px; border-radius: 50%; flex-shrink: 0;
     object-fit: cover; border: 2px solid rgba(180,120,255,0.25);
     display: block;
   }
 
   h1 {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(40px, 9vw, 68px);
+    font-size: clamp(32px, 7vw, 52px);
     font-weight: 800; line-height: 0.93; letter-spacing: -0.03em;
     opacity: 0; animation: riseIn 0.7s 0.12s ease forwards;
     margin-bottom: 18px;
@@ -152,6 +153,7 @@ const css = `
 
   .bio {
     font-size: 15px; line-height: 1.8; color: var(--muted); max-width: 460px; font-weight: 300;
+    text-align: center; margin: 0 auto;
     opacity: 0; animation: riseIn 0.7s 0.22s ease forwards;
   }
   .bio strong { color: var(--text); font-weight: 500; }
@@ -164,6 +166,7 @@ const css = `
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 11px; font-weight: 600; color: var(--purple);
     margin-bottom: 20px; letter-spacing: 0.12em; text-transform: uppercase;
+    text-align: center;
   }
 
   /* Work cards */
@@ -213,7 +216,9 @@ const css = `
   /* Contact */
   .form { display: flex; flex-direction: column; gap: 14px; }
   .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  @media (max-width: 500px) { .form-row { grid-template-columns: 1fr; } }
+  @media (max-width: 500px) {
+    .form-row { grid-template-columns: 1fr; }
+  }
 
   .field { display: flex; flex-direction: column; gap: 8px; }
   .field label { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 10px; font-weight: 600; color: var(--muted); letter-spacing: 0.12em; text-transform: uppercase; }
@@ -227,7 +232,7 @@ const css = `
   .field input:focus, .field textarea:focus { border-color: rgba(249,123,74,0.5); box-shadow: 0 0 0 3px rgba(249,123,74,0.09); }
 
   .send-btn {
-    align-self: flex-start; padding: 13px 32px;
+    align-self: center; padding: 13px 32px;
     background: linear-gradient(135deg, var(--sunset1), var(--sunset2));
     color: #0d0a14; border: none; border-radius: 10px;
     font-family: 'Plus Jakarta Sans', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: -0.01em;
@@ -240,7 +245,7 @@ const css = `
 
   .success { padding: 18px 22px; background: rgba(249,123,74,0.08); border: 1px solid rgba(249,123,74,0.2); border-radius: 12px; color: var(--sunset2); font-size: 15px; line-height: 1.7; }
 
-  .footer { margin-top: 80px; padding-top: 26px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); opacity: 0.5; font-weight: 300; }
+  .footer { margin-top: 80px; padding-top: 26px; border-top: 1px solid var(--border); font-size: 12px; color: var(--muted); opacity: 0.5; font-weight: 300; text-align: center; }
 
   @keyframes riseIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 `;
@@ -284,7 +289,7 @@ export default function JakeScheele() {
           </div>
 
           <p className="bio">
-            Founder of <strong>Bass Space</strong> · <strong>FileMaker Developer</strong> · <strong>Wobble Master</strong> · lover of music, people, and technology
+            Founder of <strong>Bass Space</strong> · <strong>Software Developer</strong> · <strong style={{whiteSpace: "nowrap"}}>Wobble Master</strong> · lover of music, people, and technology
           </p>
         </header>
 
